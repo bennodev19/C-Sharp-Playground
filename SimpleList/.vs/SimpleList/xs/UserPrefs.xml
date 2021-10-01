@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{70A263AF-38BB-4600-906E-30F5CB17C5B8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SimpleList/List.cs">
+    <Files>
+      <File FileName="SimpleList/Program.cs" Line="20" Column="24" />
+      <File FileName="SimpleList/Pupil.cs" Line="15" Column="2" />
+      <File FileName="SimpleList/List.cs" Line="161" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SimpleList" expanded="True">
+            <Node name="SimpleList" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="List.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SimpleList PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,13 @@
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/bin/Debug/netcoreapp3.1/SimpleList.deps.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/bin/Debug/netcoreapp3.1/SimpleList.runtimeconfig.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/bin/Debug/netcoreapp3.1/SimpleList.runtimeconfig.dev.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/bin/Debug/netcoreapp3.1/SimpleList.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/bin/Debug/netcoreapp3.1/SimpleList.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.csproj.AssemblyReference.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.AssemblyInfoInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.AssemblyInfo.cs
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.csproj.CoreCompileInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/SimpleList/SimpleList/obj/Debug/netcoreapp3.1/SimpleList.genruntimeconfig.cache
