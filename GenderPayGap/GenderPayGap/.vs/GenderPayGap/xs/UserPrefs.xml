@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{6678181C-6102-4A17-80C4-084ADF86B536}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GenderPayGap/Employee.cs">
+    <Files>
+      <File FileName="GenderPayGap/Program.cs" Line="1" Column="1" />
+      <File FileName="GenderPayGap/Employee.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GenderPayGap" expanded="True">
+            <Node name="GenderPayGap" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GenderPayGap FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

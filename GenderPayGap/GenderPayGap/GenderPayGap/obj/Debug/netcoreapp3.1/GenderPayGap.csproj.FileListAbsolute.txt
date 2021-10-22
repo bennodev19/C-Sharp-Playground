@@ -1,0 +1,13 @@
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/bin/Debug/netcoreapp3.1/GenderPayGap.deps.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/bin/Debug/netcoreapp3.1/GenderPayGap.runtimeconfig.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/bin/Debug/netcoreapp3.1/GenderPayGap.runtimeconfig.dev.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/bin/Debug/netcoreapp3.1/GenderPayGap.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/bin/Debug/netcoreapp3.1/GenderPayGap.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.csproj.AssemblyReference.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.GeneratedMSBuildEditorConfig.editorconfig
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.AssemblyInfoInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.AssemblyInfo.cs
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.csproj.CoreCompileInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/GenderPayGap/GenderPayGap/GenderPayGap/obj/Debug/netcoreapp3.1/GenderPayGap.genruntimeconfig.cache
