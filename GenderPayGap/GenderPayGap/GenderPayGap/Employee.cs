@@ -22,11 +22,30 @@ namespace GenderPayGap
             }
         }
 
+        public Employee(string name)
+        {
+            id = Guid.NewGuid().ToString("N");
+            this.salary = 0;
+            this.name = name;
+        }
+
         public Employee(string name, float salary)
         {
             id = Guid.NewGuid().ToString("N");
             this.salary = this.formatSalary(salary);
             this.name = name;
+        }
+
+        public bool setSalary(float value)
+        {
+            this.salary = value;
+            return value >= 1;
+        }
+
+        public bool setName(string value)
+        {
+            this.name = value;
+            return name != "jeff";
         }
 
         private float formatSalary(float value)
