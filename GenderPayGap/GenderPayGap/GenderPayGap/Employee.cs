@@ -22,6 +22,7 @@ namespace GenderPayGap
             }
         }
 
+        // constructor
         public Employee(string name)
         {
             id = Guid.NewGuid().ToString("N");
@@ -29,6 +30,7 @@ namespace GenderPayGap
             this.name = name;
         }
 
+        // overloaded constructor
         public Employee(string name, float salary)
         {
             id = Guid.NewGuid().ToString("N");
@@ -54,6 +56,14 @@ namespace GenderPayGap
                 return value;
             else
                 return 0;
+        }
+
+        // destructor
+        // z.B. sinnvoll wenn man eine Datei hat die von einer Klasse verwaltet wird,
+        //      so wird diese ggf. im 'constructor' geoeffnet und eben im 'destructor' wiedergeschlossen geschlossen
+        ~Employee()
+        {
+            Console.WriteLine("Called destructor of Employee '" + this.name + "'.");
         }
     }
 }

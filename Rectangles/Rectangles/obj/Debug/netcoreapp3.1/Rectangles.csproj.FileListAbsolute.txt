@@ -1,0 +1,13 @@
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/bin/Debug/netcoreapp3.1/Rectangles.deps.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/bin/Debug/netcoreapp3.1/Rectangles.runtimeconfig.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/bin/Debug/netcoreapp3.1/Rectangles.runtimeconfig.dev.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/bin/Debug/netcoreapp3.1/Rectangles.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/bin/Debug/netcoreapp3.1/Rectangles.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.csproj.AssemblyReference.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.GeneratedMSBuildEditorConfig.editorconfig
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.AssemblyInfoInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.AssemblyInfo.cs
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.csproj.CoreCompileInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/Debug/netcoreapp3.1/Rectangles.genruntimeconfig.cache
