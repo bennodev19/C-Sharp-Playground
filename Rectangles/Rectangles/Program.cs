@@ -23,16 +23,15 @@ namespace Rectangles
 
             // -- Test Coordinates
 
-            // Generate Geometry Objects
             int geometryObjectCount = 10;
             int[] xScope = { 0, 100 };
             int[] yScope = { 0, 100 };
             int[] widthScope = { 1, 10 };
             int[] heightScope = { 1, 10 };
 
-            List<Rectangle> list = new List<Rectangle>();
+            List<Rectangle> geometryObjects = new List<Rectangle>();
 
-
+            // Generate Geometry Objects
             for (int i = 0; i < geometryObjectCount; i++)
             {
                 int randomX = generateRandomInt(xScope[0], xScope[1]);
@@ -40,8 +39,22 @@ namespace Rectangles
                 int randomWidth = generateRandomInt(widthScope[0], widthScope[1]);
                 int randomHeight = generateRandomInt(heightScope[0], heightScope[1]);
 
-                list.Add(new Rectangle(randomWidth, randomHeight, randomX, randomY);
+                geometryObjects.Add(new Rectangle(randomWidth, randomHeight, randomX, randomY);
             }
+
+            // Check whether Geometry Objects touch
+            int touchCount = 0;
+            int overlapCount = 0;
+
+            geometryObjects.ForEach(delegate (Rectangle rectangleA)
+            {
+                geometryObjects.ForEach(delegate (Rectangle reactangleB)
+                {
+
+                 
+
+                });
+            });
         }
 
         static int generateRandomInt(int min, int max)

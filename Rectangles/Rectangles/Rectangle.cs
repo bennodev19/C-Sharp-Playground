@@ -73,7 +73,7 @@ namespace Rectangles
 
         public double getScope()
         {
-            return Math.Round(this.siteA * 2 + this.siteB * 2, 2);
+            return Math.Round((this.siteA * 2) + (this.siteB * 2), 2);
         }
 
         // 0 -- 1
@@ -90,8 +90,13 @@ namespace Rectangles
         {
             if (value > 0)
                 return value;
-            else 
+            else
+            {
                 return -1;
+                // or
+                // throw new ArgumentOutOfRangeException("site length has to be larger than 0");
+            }
+
         }
 
         private bool validate()

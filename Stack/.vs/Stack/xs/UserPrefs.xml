@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{C5015E39-FAE6-4A6E-9C9B-6FA2E951DF34}|Default">
+  <MonoDevelop.Ide.ItemProperties.Stack PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Stack/Program.cs">
+    <Files>
+      <File FileName="Stack/Views/MainWindow.axaml" Line="1" Column="1" />
+      <File FileName="Stack/ViewModels/ViewModelBase.cs" Line="1" Column="1" />
+      <File FileName="Stack/ViewModels/MainWindowViewModel.cs" Line="10" Column="38" />
+      <File FileName="Stack/Program.cs" Line="2" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Stack" expanded="True">
+            <Node name="Stack" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

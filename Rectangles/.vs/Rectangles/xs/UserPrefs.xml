@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{42E1C6DC-4BB4-48C1-B3D6-FF61BFD1C740}|Default">
-  <MonoDevelop.Ide.ItemProperties.Rectangles FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rectangles/Circle.cs">
+  <MonoDevelop.Ide.ItemProperties.Rectangles PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rectangles/Rectangle.cs">
     <Files>
-      <File FileName="Rectangles/Program.cs" Line="10" Column="58" />
-      <File FileName="Rectangles/Rectangle.cs" Line="42" Column="5" />
-      <File FileName="Rectangles/Circle.cs" Line="22" Column="1" />
-      <File FileName="Rectangles/GeometryObject.cs" Line="26" Column="10" />
+      <File FileName="Rectangles/Program.cs" Line="53" Column="1" />
+      <File FileName="Rectangles/Rectangle.cs" Line="77" Column="10" />
+      <File FileName="Rectangles/Circle.cs" Line="51" Column="10" />
+      <File FileName="Rectangles/GeometryObject.cs" Line="12" Column="1" />
       <File FileName="Rectangles/mono_crash.11a6748113.0.json" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -13,7 +13,7 @@
         <State name="__root__">
           <Node name="Rectangles" expanded="True">
             <Node name="Rectangles" expanded="True">
-              <Node name="Circle.cs" selected="True" />
+              <Node name="Rectangle.cs" selected="True" />
             </Node>
           </Node>
         </State>
