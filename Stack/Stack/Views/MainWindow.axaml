@@ -4,6 +4,7 @@
 	xmlns:vm="using:Stack.ViewModels"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:views="clr-namespace:Stack.Views"
 	mc:Ignorable="d"
 	d:DesignWidth="800"
 	d:DesignHeight="450"
@@ -15,6 +16,7 @@
 	TransparencyLevelHint="AcrylicBlur"
 	ExtendClientAreaToDecorationsHint="True">
 
+	<!-- Assign corresponding ViewModel to this View -->
 	<Design.DataContext>
 		<vm:MainWindowViewModel />
 	</Design.DataContext>
@@ -34,7 +36,6 @@
 		</ExperimentalAcrylicBorder>
 
 		<!-- Content -->
-
 
 		<DockPanel
 			Margin="40">
@@ -71,88 +72,10 @@
 			</StackPanel>
 
 			<!-- Stack -->
-			<StackPanel>
-				<Rectangle
-					x:Name="stackElement9"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,82,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement8"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,101,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement7"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,120,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement6"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,139,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement5"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,158,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement4"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,177,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement3"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,196,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement2"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,215,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement1"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,234,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-				<Rectangle
-					x:Name="stackElement0"
-					HorizontalAlignment="Left"
-					Height="19"
-					Margin="143,253,0,0"
-					Stroke="Black"
-					VerticalAlignment="Top"
-					Width="100" />
-			</StackPanel>
+			<ItemsControl
+				Items="{Binding Items}">
+			</ItemsControl>
+
 		</DockPanel>
 	</Panel>
 

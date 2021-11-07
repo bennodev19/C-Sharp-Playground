@@ -16,7 +16,7 @@
 	TransparencyLevelHint="AcrylicBlur"
 	ExtendClientAreaToDecorationsHint="True">
 
-	<!-- Assign coresponding ViewModel to this View -->
+	<!-- Assign corresponding ViewModel to this View -->
 	<Design.DataContext>
 		<vm:MainWindowViewModel />
 	</Design.DataContext>

@@ -1,0 +1,30 @@
+<UserControl
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vm="using:Stack.ViewModels"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignWidth="800"
+	d:DesignHeight="450"
+	x:Class="Stack.Views.StackItemView">
+
+	<!-- Assign corresponding ViewModel to this View -->
+	<Design.DataContext>
+		<vm:StackItemViewModel />
+	</Design.DataContext>
+
+	<Border
+		Width="200"
+		Height="50"
+		BorderBrush="Black"
+		BorderThickness="2"
+		CornerRadius="3"
+		Background="{Binding fillColor}">
+		<TextBlock
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Text="{Binding value}" />
+	</Border>
+
+</UserControl>
