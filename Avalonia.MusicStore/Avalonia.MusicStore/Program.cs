@@ -1,8 +1,9 @@
 ﻿using System;
 using Avalonia;
+using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
 
-namespace Stack
+namespace Avalonia.MusicStore
 {
     class Program
     {
@@ -14,7 +15,8 @@ namespace Stack
             .StartWithClassicDesktopLifetime(args);
 
         // Avalonia configuration, don't remove; also used by visual designer.
-        public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>()
+        public static AppBuilder BuildAvaloniaApp()
+            => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .LogToTrace()
                 .UseReactiveUI();

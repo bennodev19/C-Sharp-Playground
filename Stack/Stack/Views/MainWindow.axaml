@@ -3,18 +3,125 @@
         xmlns:vm="using:Stack.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800"
+        d:DesignHeight="450"
         x:Class="Stack.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Stack1">
+        Title="Stack">
 
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
 
     <Grid>
-        <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Text="Test" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid>
+            <TextBox
+                Name="StackTextInput"
+                Margin="0,149,0,0"
+                Text="TextBox"
+                TextWrapping="Wrap"
+                Width="120" />
+            <Button
+                Name="PopBtn"
+                Content="Pop"
+                Margin="0,0,0,0"
+                Width="60" 
+                Click="onPopBtnClicked"
+               />
+            <Button
+                Name="PushBtn"
+                Content="Push"
+                Margin="355,177,0,0"
+                Width="60" 
+                Click="onPushBtnClicked" />
+            <TextBlock
+                Name="NoteTxt"
+                Margin="297,231,0,0"
+                TextWrapping="Wrap"
+                Text="Hinweis:" />
+        </Grid>
+
+        <!-- Stack -->
+        <Rectangle
+            x:Name="stackElement9"
+            HorizontalAlignment="Left"
+            Height="19" Margin="143,82,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement8"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,101,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement7"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,120,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement6"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,139,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement5"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,158,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement4"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,177,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement3"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,196,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement2"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,215,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement1"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,234,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+        <Rectangle
+            x:Name="stackElement0"
+            HorizontalAlignment="Left"
+            Height="19"
+            Margin="143,253,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="100" />
+
     </Grid>
-    
+
 </Window>
