@@ -53,6 +53,7 @@
 				Text="Its lonely in here. Purchase some music to get your collection started."
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center" />
+			
 			<ItemsControl
 				Margin="0 40 0 0"
 				Items="{Binding Albums}">
