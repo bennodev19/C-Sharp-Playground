@@ -4,6 +4,7 @@
 	xmlns:vm="using:Avalonia.MusicStore.ViewModels"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
 	mc:Ignorable="d"
 	d:DesignWidth="800"
 	d:DesignHeight="450"
@@ -15,6 +16,7 @@
 	TransparencyLevelHint="AcrylicBlur"
 	ExtendClientAreaToDecorationsHint="True">
 
+	<!-- Assign coresponding ViewModel to this View -->
 	<Design.DataContext>
 		<vm:MainWindowViewModel />
 	</Design.DataContext>
@@ -35,7 +37,6 @@
 
 		<!-- Content -->
 
-
 		<Panel
 			Margin="40">
 			<!-- Icon Button (https://docs.avaloniaui.net/tutorials/music-store-app/add-and-layout-controls) -->
@@ -46,9 +47,29 @@
 				<PathIcon
 					Data="{StaticResource store_microsoft_regular}" />
 			</Button>
+
+			<TextBlock
+				IsVisible="{Binding CollectionEmpty}"
+				Text="Its lonely in here. Purchase some music to get your collection started."
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center" />
+			<ItemsControl
+				Margin="0 40 0 0"
+				Items="{Binding Albums}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<views:AlbumView
+							Margin="0 0 20 20" />
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
 		</Panel>
-
-
+		
 	</Panel>
 
 </Window>

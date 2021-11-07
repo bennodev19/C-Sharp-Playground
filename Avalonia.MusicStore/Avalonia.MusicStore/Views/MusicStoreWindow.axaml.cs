@@ -1,10 +1,12 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Markup.Xaml;
+using Avalonia.MusicStore.ViewModels;
+using Avalonia.ReactiveUI;
+using ReactiveUI;
+using System;
 
 namespace Avalonia.MusicStore.Views
 {
-    public class MusicStoreWindow : Window
+    public class MusicStoreWindow : ReactiveWindow<MusicStoreViewModel>
     {
         public MusicStoreWindow()
         {
@@ -12,6 +14,9 @@ namespace Avalonia.MusicStore.Views
 #if DEBUG
             this.AttachDevTools();
 #endif
+            
+            // Closes the modal when the 'BuyMusicCommand' callback invokes
+            this.WhenActivated(d => d(ViewModel!.BuyMusicCommand.Subscribe(Close)));
         }
 
         private void InitializeComponent()

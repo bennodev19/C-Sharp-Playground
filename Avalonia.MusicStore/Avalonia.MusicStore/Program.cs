@@ -3,6 +3,11 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
 
+// Tutorial:
+// https://www.youtube.com/watch?v=kZCIporjJ70&t=1643s
+// https://www.youtube.com/watch?v=6m9Vxz3An0Y
+// https://docs.avaloniaui.net/tutorials/music-store-app/opening-a-dialog
+
 namespace Avalonia.MusicStore
 {
     class Program
