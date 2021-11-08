@@ -40,14 +40,19 @@
 		<DockPanel
 			Margin="40">
 
+			<!-- Stack -->
+			<ItemsControl
+				Items="{Binding Items}" VerticalAlignment="Center">
+			</ItemsControl>
+			
 			<!-- Input -->
-			<StackPanel>
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 0 0 0" Width="200">
 				<TextBox
 					Name="StackTextInput"
 					Text="{Binding itemName}"
 					Watermark="Stack Item"
-					Width="120"
-					HorizontalAlignment="Left" />
+					Width="200"
+					HorizontalAlignment="Left"  />
 
 				<DockPanel
 					Margin="0 10">
@@ -55,26 +60,23 @@
 						Name="PopBtn"
 						Command="{Binding onPopItem}"
 						Content="Pop"
-						Width="60"
+						Width="100"
 						HorizontalAlignment="Left" />
 					<Button
 						Name="PushBtn"
 						Command="{Binding onPushItem}"
 						Content="Push"
-						Width="60"
+						Width="100"
 						HorizontalAlignment="Left" />
 				</DockPanel>
 
 				<TextBlock
 					Name="NoteTxt"
 					Text="{Binding uiNote}"
-					TextWrapping="Wrap" />
+					Foreground="{Binding uiNoteColor}"
+					TextWrapping="Wrap"
+					HorizontalAlignment="Left"/>
 			</StackPanel>
-
-			<!-- Stack -->
-			<ItemsControl
-				Items="{Binding Items}">
-			</ItemsControl>
 
 		</DockPanel>
 	</Panel>

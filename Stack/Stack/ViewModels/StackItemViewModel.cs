@@ -14,7 +14,6 @@ namespace Stack.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set
             {
-                this._fillColor = value != null ? "green" : "gray";
                 this.RaiseAndSetIfChanged(ref _value, value);
             }
         }
@@ -29,8 +28,6 @@ namespace Stack.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _fillColor, value);
         }
-
-        public bool isFilled => this.value != null;
 
         public StackItemViewModel(int? value)
         {
