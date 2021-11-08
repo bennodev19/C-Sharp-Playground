@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{C5015E39-FAE6-4A6E-9C9B-6FA2E951DF34}|Default">
   <MonoDevelop.Ide.ItemProperties.Stack PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Stack/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Stack/Views/MainWindow.axaml">
     <Files>
-      <File FileName="Stack/Views/MainWindow.axaml" Line="1" Column="1" />
+      <File FileName="Stack/Views/MainWindow.axaml" Line="20" Column="7" />
       <File FileName="Stack/ViewModels/ViewModelBase.cs" Line="1" Column="1" />
       <File FileName="Stack/ViewModels/MainWindowViewModel.cs" Line="10" Column="38" />
       <File FileName="Stack/Program.cs" Line="2" Column="15" />
@@ -13,8 +13,9 @@
           <Node name="Stack" expanded="True">
             <Node name="Stack" expanded="True">
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Views" expanded="True">
+                <Node name="MainWindow.axaml" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
