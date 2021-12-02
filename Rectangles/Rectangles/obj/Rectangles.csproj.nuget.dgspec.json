@@ -14,7 +14,7 @@
         "outputPath": "/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/Rectangles/Rectangles/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/benno/.config/NuGet/NuGet.Config"
+          "/Users/benno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
