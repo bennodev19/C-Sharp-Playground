@@ -1,5 +1,5 @@
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Text;
 
 namespace BracketParser
@@ -9,6 +9,7 @@ namespace BracketParser
         private IntStack stack;
         private string toParseValue;
         private char[,] bracketTupels = new[,] {{'{', '}'}, {'(', ')'}, {'[', ']'}};
+        private List<BracketError> errors = new List<BracketError>();
 
         public BracketParser(string toParseValue)
         {
@@ -16,13 +17,14 @@ namespace BracketParser
             this.stack = new IntStack(this.toParseValue.Length / 2);
         }
         
-        public bool parse()
+        public bool isValid()
         {
             bool valid = false;
 
             // Check if value is even, because otherwise there would be at least one not closing bracket
-            if (this.toParseValue.Length > 0 && this.toParseValue.Length % 2 == 0)
-            {
+            // Note: Not useful when trying to find the error position
+            // if (this.toParseValue.Length > 0 && this.toParseValue.Length % 2 == 0)
+            // {
                 // Check if first char is a closing bracket ('}', ')', ']') -> would be invalid
                 if (this.isOpeningBracket(this.toParseValue[0]))
                 {
@@ -39,50 +41,68 @@ namespace BracketParser
                    
                     // Validate 'toParseValue'
                     valid = true;
-                    for (int i = 0; i < last.Length; i++)
+                    for (int i = 0; i < last.Length && valid; i++)
                     {
                         int poppedValue = this.stack.pop();
-                        if (poppedValue != this.getOppositeBracket(last[i]))
+                        int oppositeValue = this.getOppositeBracket(last[i]);
+                        if (poppedValue != oppositeValue)
                         {
                             valid = false;
+
+                            // Add Error
+                            this.errors.Add(new BracketError("Syntax Error at index " + i + "! Couldn't find closing bracket for " + poppedValue + "."));
                         }
                     }
                 }
-            }
+                else
+                {
+                   this.errors.Add(new BracketError("SyntaxError at index 0. You can't start a program with a closing bracket!"));
+                }
+            // }
 
             return valid;
         }
 
+        public int getMissingBracketsCount()
+        {
+            return this.errors.Count;
+        }
+
+        public List<BracketError> getErrors()
+        {
+            return this.errors;
+        }
+
         private bool isOpeningBracket(char value)
         {
-            bool validValue = false;
-            for (int i = 0; i < bracketTupels.GetLength(0) && !validValue; i++)
+            bool valid = false;
+            for (int i = 0; i < bracketTupels.GetLength(0) && !valid; i++)
             {
                 if (value == this.bracketTupels[i, 0])
                 {
-                    validValue = true;
+                    valid = true;
                 }
             }
             
-            return validValue;
+            return valid;
         }
 
         private bool isValidBracket(char value)
         {
-            bool validValue = false;
+            bool valid = false;
             // https://stackoverflow.com/questions/9301109/how-do-you-loop-through-a-multidimensional-array
-            for (int i = 0; i < this.bracketTupels.GetLength(0) && !validValue; i++)
+            for (int i = 0; i < this.bracketTupels.GetLength(0) && !valid; i++)
             {
-                for (int j = 0; j < this.bracketTupels.GetLength(1) && !validValue; j++)
+                for (int j = 0; j < this.bracketTupels.GetLength(1) && !valid; j++)
                 {
                     if (value == this.bracketTupels[i, j])
                     {
-                        validValue = true;
+                        valid = true;
                     } 
                 }
             }
 
-            return validValue;
+            return valid;
         }
 
         private int getOppositeBracket(int bracket)
