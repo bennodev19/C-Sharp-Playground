@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 
 namespace BracketParser
@@ -12,7 +13,7 @@ namespace BracketParser
         public BracketParser(string toParseValue)
         {
             this.toParseValue = this.stripInvalidChars(toParseValue);
-            stack = new IntStack(this.toParseValue.Length / 2);
+            this.stack = new IntStack(this.toParseValue.Length / 2);
         }
         
         public bool parse()
@@ -25,22 +26,23 @@ namespace BracketParser
                 // Check if first char is a closing bracket ('}', ')', ']') -> would be invalid
                 if (this.isOpeningBracket(this.toParseValue[0]))
                 {
-                    var first = this.toParseValue.Substring(0, (int)(this.toParseValue.Length / 2));
-                    var last = this.toParseValue.Substring((int)(this.toParseValue.Length / 2), (int)(this.toParseValue.Length / 2));
+                    var first = this.toParseValue
+                        .Substring(0, this.toParseValue.Length / 2);
+                    var last = this.toParseValue
+                        .Substring(this.toParseValue.Length / 2, this.toParseValue.Length / 2);
 
                     // Fill Stack with the first half of the 'toParseValue'
                     for (int i = 0; i < first.Length; i++)
                     {
-                        stack.push(first[0]);
+                        stack.push(first[i]);
                     }
                    
                     // Validate 'toParseValue'
                     valid = true;
                     for (int i = 0; i < last.Length; i++)
                     {
-                        var poppedValue = stack.pop();
-                        Console.WriteLine(i + ") Popped: '" + poppedValue + "', Last: '" + this.getOppositeBracket(last[0]) + "'"); // TODO REMOVE
-                        if (poppedValue != this.getOppositeBracket(last[0]))
+                        int poppedValue = this.stack.pop();
+                        if (poppedValue != this.getOppositeBracket(last[i]))
                         {
                             valid = false;
                         }
@@ -82,21 +84,6 @@ namespace BracketParser
 
             return validValue;
         }
-        
-        // Strip all chars that are no valid 'bracket' (not in bracketTupels)
-        private string stripInvalidChars(string value)
-        {
-            var builder = new StringBuilder();
-            foreach (var letter in value)
-            {
-                if (isValidBracket(letter))
-                {
-                    builder.Append(letter);
-                }
-            }
-
-            return builder.ToString();
-        }
 
         private int getOppositeBracket(int bracket)
         {
@@ -113,9 +100,24 @@ namespace BracketParser
                 }
             }
 
-            return -1;
+            throw new Exception("Couldn't find opposite bracket");
         }
 
+        // Strip all chars that are no valid 'bracket' (not in bracketTupels)
+        private string stripInvalidChars(string value)
+        {
+            var builder = new StringBuilder();
+            foreach (char letter in value)
+            {
+                if (isValidBracket(letter))
+                {
+                    builder.Append(letter);
+                }
+            }
+
+            return builder.ToString();
+        }
+        
         public string getStrippedValue()
         {
             return this.toParseValue;

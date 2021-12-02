@@ -6,7 +6,7 @@ namespace BracketParser
     {
         static void Main(string[] args)
         {
-            string toParseValue = "{}";
+            string toParseValue = "{([helloWorld()])}";
             BracketParser bracketParser = new BracketParser(toParseValue);
             Console.WriteLine("Stripped value: '" + bracketParser.getStrippedValue() + "'");
             
