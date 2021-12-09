@@ -50,7 +50,7 @@ namespace BracketParser
                             valid = false;
 
                             // Add Error
-                            this.errors.Add(new BracketError("Syntax Error at index " + i + "! Couldn't find closing bracket for " + poppedValue + "."));
+                            this.errors.Add(new BracketError("Syntax Error at index " + i + "! Couldn't find closing bracket for " + (char)stack.pop() + "."));
                         }
                     }
                 }
