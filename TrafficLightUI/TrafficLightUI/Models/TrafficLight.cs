@@ -20,9 +20,9 @@ namespace TrafficLightUI
         private TrafficLightStatus[] statusOrder = new TrafficLightStatus[] 
             {TrafficLightStatus.Stop, TrafficLightStatus.Prepare, TrafficLightStatus.Go, TrafficLightStatus.Warning};
 
-        private Func<TrafficLightStatus, int> trafficLightCallback;
+        private Action<TrafficLightStatus> trafficLightCallback;
 
-        public TrafficLight(Func<TrafficLightStatus, int> trafficLightCallback)
+        public TrafficLight(Action<TrafficLightStatus> trafficLightCallback)
         {
             this.trafficLightCallback = trafficLightCallback;
             this.currentStatus = TrafficLightStatus.Off;
@@ -30,12 +30,34 @@ namespace TrafficLightUI
 
         public void start()
         {
-            this.switchToStatus(TrafficLightStatus.Standby);
+            if (this.currentStatus == TrafficLightStatus.Off)
+            {
+                this.switchToStatus(TrafficLightStatus.Standby);
+            }
+            else if (this.currentStatus == TrafficLightStatus.Standby)
+            {
+                this.switchToStatus(TrafficLightStatus.Stop);
+            }
+            else
+            {
+                Console.WriteLine("Traffic Light is already up and running!");
+            }
         }
 
         public void stop()
         {
-           this.switchToStatus(TrafficLightStatus.Off);
+            if (this.currentStatus != TrafficLightStatus.Off && this.currentStatus != TrafficLightStatus.Standby)
+           {
+               this.switchToStatus(TrafficLightStatus.Standby);
+           }
+           else if (this.currentStatus == TrafficLightStatus.Standby)
+           {
+               this.switchToStatus(TrafficLightStatus.Off);
+           }
+            else
+            {
+                Console.WriteLine("Traffic Light is already offline!");
+            }
         }
 
         public TrafficLightStatus switchStatus()
@@ -73,16 +95,26 @@ namespace TrafficLightUI
             // Handle special Status 'Standby'
             if (status == TrafficLightStatus.Standby)
             {
-                this.switchToStatus(TrafficLightStatus.Stop);
-                await Task.Delay(2000); // Sleep
+                // Set Light to 'Stop' before switching to Standby
+                // in order to not confuse driver
+                if (this.currentStatus != TrafficLightStatus.Off && this.currentStatus != TrafficLightStatus.Standby)
+                {
+                    this.switchToStatus(TrafficLightStatus.Stop);
+                    await Task.Delay(5000); // Sleep
+                }
                 this.currentStatus = TrafficLightStatus.Standby;
             }
 
             // Handle special Status 'Off'
             if (status == TrafficLightStatus.Off)
             {
-                this.switchToStatus(TrafficLightStatus.Standby);
-                await Task.Delay(2000); // Sleep
+                // Set Light to 'Standby' before turning the Traffic Light off
+                // in order to not confuse driver
+                if (this.currentStatus != TrafficLightStatus.Standby)
+                {
+                    this.switchToStatus(TrafficLightStatus.Standby);
+                    await Task.Delay(5000); // Sleep
+                }
                 this.currentStatus = TrafficLightStatus.Off;
             }
 

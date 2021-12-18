@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using ReactiveUI;
 
 namespace TrafficLightUI.ViewModels
@@ -42,28 +43,87 @@ namespace TrafficLightUI.ViewModels
         }
         
         private TrafficLight trafficLight;
+        private bool isStandby = false;
 
         public MainWindowViewModel()
         {
-            trafficLight = new TrafficLight((status =>
-            {
-                // Handle Stop
-                if (status == TrafficLightStatus.Stop)
-                {
-                    this.topLightColor = "red";
-                    this.centerLightColor = "gray";
-                    this.bottomLightColor = "gray";
-                }
-                
-                // TODO
-                
-                return 1;
-            }));
+            trafficLight = new TrafficLight(this.trafficLightCallback);
                 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
             this.onStop = ReactiveCommand.Create(async () => { this._onStop(); });
             this.onSwitch = ReactiveCommand.Create(async () => { this._onSwitch(); });
+        }
+
+        private async void trafficLightCallback(TrafficLightStatus status)
+        {
+            if (status == TrafficLightStatus.Off)
+            {
+                this.topLightColor = "gray";
+                this.centerLightColor = "gray";
+                this.bottomLightColor = "gray";
+            }
+            
+            if (status == TrafficLightStatus.Standby)
+            {
+                this.isStandby = true;
+                this.handleStandby();
+            }
+            else
+            {
+                this.isStandby = false;
+            }
+            
+            if (status == TrafficLightStatus.Stop)
+            {
+                this.topLightColor = "red";
+                this.centerLightColor = "gray";
+                this.bottomLightColor = "gray";
+            }
+            
+            if (status == TrafficLightStatus.Prepare)
+            {
+                this.topLightColor = "red";
+                this.centerLightColor = "yellow";
+                this.bottomLightColor = "gray";
+            }
+            
+            if (status == TrafficLightStatus.Go)
+            {
+                this.topLightColor = "gray";
+                this.centerLightColor = "gray";
+                this.bottomLightColor = "green";
+            }
+            
+            if (status == TrafficLightStatus.Warning)
+            {
+                this.topLightColor = "gray";
+                this.centerLightColor = "yellow";
+                this.bottomLightColor = "gray";
+            }
+        }
+
+        private async void handleStandby()
+        {
+            this.topLightColor = "gray";
+            this.centerLightColor = "yellow"; 
+            this.bottomLightColor = "gray";
+            
+            // Blink yellow
+            bool light = true;
+            while (this.isStandby)
+            {
+                if (light)
+                {
+                    this.centerLightColor = "yellow"; 
+                }
+                else
+                {
+                    this.centerLightColor = "gray";
+                }
+                await Task.Delay(1000); // Sleep
+                light = !light;
+            }
         }
 
         private void _onStart()
