@@ -5,14 +5,26 @@ namespace TrafficLightUI
 {
     public class TrafficLight
     {
-        private TrafficLightStatus currentStatus;
+        private TrafficLightStatus _currentStatus;
+        private TrafficLightStatus currentStatus
+        {
+            get { return _currentStatus; }
+            set
+            {
+                this.trafficLightCallback(value);
+                _currentStatus = value;
+            } 
+        }
 
         // Order of Statuses that can actually be displayed by a Traffic Light that is active
         private TrafficLightStatus[] statusOrder = new TrafficLightStatus[] 
             {TrafficLightStatus.Stop, TrafficLightStatus.Prepare, TrafficLightStatus.Go, TrafficLightStatus.Warning};
 
-        public TrafficLight()
+        private Func<TrafficLightStatus, int> trafficLightCallback;
+
+        public TrafficLight(Func<TrafficLightStatus, int> trafficLightCallback)
         {
+            this.trafficLightCallback = trafficLightCallback;
             this.currentStatus = TrafficLightStatus.Off;
         }
 

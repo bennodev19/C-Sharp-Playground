@@ -45,7 +45,20 @@ namespace TrafficLightUI.ViewModels
 
         public MainWindowViewModel()
         {
-            trafficLight = new TrafficLight();
+            trafficLight = new TrafficLight((status =>
+            {
+                // Handle Stop
+                if (status == TrafficLightStatus.Stop)
+                {
+                    this.topLightColor = "red";
+                    this.centerLightColor = "gray";
+                    this.bottomLightColor = "gray";
+                }
+                
+                // TODO
+                
+                return 1;
+            }));
                 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
