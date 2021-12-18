@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace TrafficLight
+namespace TrafficLightUI
 {
     public class TrafficLight
     {

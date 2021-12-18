@@ -1,0 +1,15 @@
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/TrafficLight.deps.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/TrafficLight.runtimeconfig.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/TrafficLight.runtimeconfig.dev.json
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/TrafficLight.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/ref/TrafficLight.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/bin/Debug/net5.0/TrafficLight.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.csproj.AssemblyReference.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.GeneratedMSBuildEditorConfig.editorconfig
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.AssemblyInfoInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.AssemblyInfo.cs
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.csproj.CoreCompileInputs.cache
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/ref/TrafficLight.dll
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.pdb
+/Users/benno/Desktop/Workspace/C#/Berufsschule/Projects/TrafficLight/TrafficLight/obj/Debug/net5.0/TrafficLight.genruntimeconfig.cache
