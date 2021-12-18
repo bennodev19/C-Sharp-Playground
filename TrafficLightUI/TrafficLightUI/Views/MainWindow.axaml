@@ -82,25 +82,37 @@
                        Name="StartBtn"
                        Command="{Binding onStart}"
                        Content="Start"
+                       HorizontalContentAlignment="Center"
                        Width="100"
                        Margin="5"
-                       HorizontalAlignment="Center" />
+                       HorizontalAlignment="Left" />
                    <Button
                        Name="StopBtn"
                        Command="{Binding onStop}"
                        Content="Stop"
+                       HorizontalContentAlignment="Center"
                        Width="100"
                        Margin="5"
-                       HorizontalAlignment="Center" />
+                       HorizontalAlignment="Left" />
                </DockPanel>
                
                <Button
                    Name="SwitchBtn"
                    Command="{Binding onSwitch}"
                    Content="Switch"
+                   HorizontalContentAlignment="Center"
                    Width="200"
                    Margin="5"
-                   HorizontalAlignment="Center" />
+                   HorizontalAlignment="Left" />
+               
+               <Button
+                   Name="AutomaticBtn"
+                   Command="{Binding onAutomatic}"
+                   Content="Automatic"
+                   HorizontalContentAlignment="Center"
+                   Width="200"
+                   Margin="5"
+                   HorizontalAlignment="Left" />
                
            </StackPanel>
            

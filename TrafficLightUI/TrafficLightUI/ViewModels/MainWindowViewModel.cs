@@ -10,6 +10,7 @@ namespace TrafficLightUI.ViewModels
         public ICommand onStart { get; }
         public ICommand onStop { get; }
         public ICommand onSwitch { get; }
+        public ICommand onAutomatic { get; }
         
         // Traffic Lights
         private string? _topLightColor = "gray";
@@ -47,15 +48,16 @@ namespace TrafficLightUI.ViewModels
 
         public MainWindowViewModel()
         {
-            trafficLight = new TrafficLight(this.trafficLightCallback);
+            trafficLight = new TrafficLight(this.handleTrafficLightLight);
                 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
             this.onStop = ReactiveCommand.Create(async () => { this._onStop(); });
             this.onSwitch = ReactiveCommand.Create(async () => { this._onSwitch(); });
+            this.onAutomatic = ReactiveCommand.Create(async () => { this._onAutomatic(); });
         }
 
-        private async void trafficLightCallback(TrafficLightStatus status)
+        private async void handleTrafficLightLight(TrafficLightStatus status)
         {
             if (status == TrafficLightStatus.Off)
             {
@@ -139,6 +141,11 @@ namespace TrafficLightUI.ViewModels
         private void _onSwitch()
         {
             trafficLight.switchStatus();
+        }
+
+        private void _onAutomatic()
+        {
+            // TODO
         }
     }
 }
