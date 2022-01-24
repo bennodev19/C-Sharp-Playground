@@ -12,6 +12,26 @@ namespace TrafficLightUI.ViewModels
         public ICommand onSwitch { get; }
         public ICommand onAutomatic { get; }
         
+        // UI
+        private string? _uiNote;
+        public string? uiNote
+        {
+            get => _uiNote;
+            // RaiseAndSetIfChanged() notifies (re-renders) the UI if it is called
+            // -> everytime the ItemName property is updated it is called in the setter method.
+            // https://docs.avaloniaui.net/docs/data-binding/change-notifications
+            set => this.RaiseAndSetIfChanged(ref _uiNote, value);
+        }
+        private string? _uiNoteColor;
+        public string? uiNoteColor
+        {
+            get => _uiNoteColor;
+            // RaiseAndSetIfChanged() notifies (re-renders) the UI if it is called
+            // -> everytime the ItemName property is updated it is called in the setter method.
+            // https://docs.avaloniaui.net/docs/data-binding/change-notifications
+            set => this.RaiseAndSetIfChanged(ref _uiNoteColor, value);
+        }
+        
         // Traffic Lights
         private string? _topLightColor = "gray";
         public string? topLightColor
@@ -48,7 +68,7 @@ namespace TrafficLightUI.ViewModels
 
         public MainWindowViewModel()
         {
-            trafficLight = new TrafficLight(this.handleTrafficLightLight);
+            trafficLight = new TrafficLight(this.handleTrafficLightStatus);
                 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
@@ -57,7 +77,7 @@ namespace TrafficLightUI.ViewModels
             this.onAutomatic = ReactiveCommand.Create(async () => { this._onAutomatic(); });
         }
 
-        private async void handleTrafficLightLight(TrafficLightStatus status)
+        private async void handleTrafficLightStatus(TrafficLightStatus status)
         {
             if (status == TrafficLightStatus.Off)
             {
@@ -127,15 +147,41 @@ namespace TrafficLightUI.ViewModels
                 light = !light;
             }
         }
+        
+        private void setUINote(string note, string type)
+        {
+            this.uiNote = "Note: " + note;
+
+            // Update uiNote color
+            switch (type)
+            {
+                case "error":
+                    uiNoteColor = "red";
+                    break;
+                case "success":
+                    uiNoteColor = "green";
+                    break;
+                case "warning":
+                    uiNoteColor = "yellow";
+                    break;
+                default:
+                    uiNoteColor = "black";
+                    break;
+            }
+        }
 
         private void _onStart()
         {
-            trafficLight.start();
+            string error = trafficLight.start();
+            if(error != null)
+                setUINote(error, "error");
         }
         
         private void _onStop()
         {
-            trafficLight.stop();
+            string error = trafficLight.stop();
+            if(error != null)
+              setUINote(error, "error");
         }
         
         private void _onSwitch()

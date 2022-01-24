@@ -28,7 +28,7 @@ namespace TrafficLightUI
             this.currentStatus = TrafficLightStatus.Off;
         }
 
-        public void start()
+        public string start()
         {
             if (this.currentStatus == TrafficLightStatus.Off)
             {
@@ -41,10 +41,13 @@ namespace TrafficLightUI
             else
             {
                 Console.WriteLine("Traffic Light is already up and running!");
+                return "Traffic Light is already up and running!";
             }
+
+            return null;
         }
 
-        public void stop()
+        public string stop()
         {
             if (this.currentStatus != TrafficLightStatus.Off && this.currentStatus != TrafficLightStatus.Standby)
            {
@@ -57,7 +60,10 @@ namespace TrafficLightUI
             else
             {
                 Console.WriteLine("Traffic Light is already offline!");
+                return "Traffic Light is already offline!";
             }
+
+            return null;
         }
 
         public TrafficLightStatus switchStatus()
