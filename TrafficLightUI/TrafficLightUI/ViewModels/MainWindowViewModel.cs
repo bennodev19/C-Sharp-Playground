@@ -11,9 +11,10 @@ namespace TrafficLightUI.ViewModels
         public ICommand onStop { get; }
         public ICommand onSwitch { get; }
         public ICommand onAutomatic { get; }
-        
+
         // UI
         private string? _uiNote;
+
         public string? uiNote
         {
             get => _uiNote;
@@ -22,7 +23,9 @@ namespace TrafficLightUI.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _uiNote, value);
         }
+
         private string? _uiNoteColor;
+
         public string? uiNoteColor
         {
             get => _uiNoteColor;
@@ -31,9 +34,10 @@ namespace TrafficLightUI.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _uiNoteColor, value);
         }
-        
+
         // Traffic Lights
         private string? _topLightColor = "gray";
+
         public string? topLightColor
         {
             get => _topLightColor;
@@ -42,8 +46,9 @@ namespace TrafficLightUI.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _topLightColor, value);
         }
-        
+
         private string? _centerLightColor = "gray";
+
         public string? centerLightColor
         {
             get => _centerLightColor;
@@ -52,8 +57,9 @@ namespace TrafficLightUI.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _centerLightColor, value);
         }
-        
+
         private string? _bottomLightColor = "gray";
+
         public string? bottomLightColor
         {
             get => _bottomLightColor;
@@ -62,14 +68,16 @@ namespace TrafficLightUI.ViewModels
             // https://docs.avaloniaui.net/docs/data-binding/change-notifications
             set => this.RaiseAndSetIfChanged(ref _bottomLightColor, value);
         }
-        
-        private TrafficLight trafficLight;
+
+        // Traffic Light
+        private CrossRoad crossRoad;
         private bool isStandby = false;
 
         public MainWindowViewModel()
         {
-            trafficLight = new TrafficLight(this.handleTrafficLightStatus);
-                
+            TrafficLight trafficLight = new TrafficLight(this.handleTrafficLightStatus);
+            crossRoad = new CrossRoad(trafficLight);
+
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
             this.onStop = ReactiveCommand.Create(async () => { this._onStop(); });
@@ -85,7 +93,7 @@ namespace TrafficLightUI.ViewModels
                 this.centerLightColor = "gray";
                 this.bottomLightColor = "gray";
             }
-            
+
             if (status == TrafficLightStatus.Standby)
             {
                 this.isStandby = true;
@@ -95,28 +103,28 @@ namespace TrafficLightUI.ViewModels
             {
                 this.isStandby = false;
             }
-            
+
             if (status == TrafficLightStatus.Stop)
             {
                 this.topLightColor = "red";
                 this.centerLightColor = "gray";
                 this.bottomLightColor = "gray";
             }
-            
+
             if (status == TrafficLightStatus.Prepare)
             {
                 this.topLightColor = "red";
                 this.centerLightColor = "yellow";
                 this.bottomLightColor = "gray";
             }
-            
+
             if (status == TrafficLightStatus.Go)
             {
                 this.topLightColor = "gray";
                 this.centerLightColor = "gray";
                 this.bottomLightColor = "green";
             }
-            
+
             if (status == TrafficLightStatus.Warning)
             {
                 this.topLightColor = "gray";
@@ -128,27 +136,28 @@ namespace TrafficLightUI.ViewModels
         private async void handleStandby()
         {
             this.topLightColor = "gray";
-            this.centerLightColor = "yellow"; 
+            this.centerLightColor = "yellow";
             this.bottomLightColor = "gray";
-            
+
             // Blink yellow
             bool light = true;
             while (this.isStandby)
             {
                 if (light)
                 {
-                    this.centerLightColor = "yellow"; 
+                    this.centerLightColor = "yellow";
                 }
                 else
                 {
                     this.centerLightColor = "gray";
                 }
+
                 await Task.Delay(1000); // Sleep
                 light = !light;
             }
         }
-        
-        private void setUINote(string note, string type)
+
+        private void setUINote(string note, string? type)
         {
             this.uiNote = "Note: " + note;
 
@@ -170,28 +179,39 @@ namespace TrafficLightUI.ViewModels
             }
         }
 
+        private void resetUINote()
+        {
+            this._uiNote = "";
+        }
+
         private void _onStart()
         {
-            string error = trafficLight.start();
-            if(error != null)
-                setUINote(error, "error");
+            resetUINote();
+            
+            string error = this.crossRoad.start();
+            if (error != null) this.setUINote(error, "error");
         }
-        
+
         private void _onStop()
         {
-            string error = trafficLight.stop();
-            if(error != null)
-              setUINote(error, "error");
+            resetUINote();
+            
+            string error = this.crossRoad.stop();
+            if (error != null) this.setUINote(error, "error");
         }
-        
+
         private void _onSwitch()
         {
-            trafficLight.switchStatus();
+            resetUINote();
+            
+            this.crossRoad.manualSwitch();
         }
 
         private void _onAutomatic()
         {
-            // TODO
+            resetUINote();
+            
+            crossRoad.toggleAutomatic();
         }
     }
 }

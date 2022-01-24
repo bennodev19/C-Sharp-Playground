@@ -6,6 +6,7 @@ namespace TrafficLightUI
     public class TrafficLight
     {
         private TrafficLightStatus _currentStatus;
+
         private TrafficLightStatus currentStatus
         {
             get { return _currentStatus; }
@@ -13,11 +14,11 @@ namespace TrafficLightUI
             {
                 this.trafficLightCallback(value);
                 _currentStatus = value;
-            } 
+            }
         }
 
         // Order of Statuses that can actually be displayed by a Traffic Light that is active
-        private TrafficLightStatus[] statusOrder = new TrafficLightStatus[] 
+        private TrafficLightStatus[] statusOrder = new TrafficLightStatus[]
             {TrafficLightStatus.Stop, TrafficLightStatus.Prepare, TrafficLightStatus.Go, TrafficLightStatus.Warning};
 
         private Action<TrafficLightStatus> trafficLightCallback;
@@ -50,13 +51,13 @@ namespace TrafficLightUI
         public string stop()
         {
             if (this.currentStatus != TrafficLightStatus.Off && this.currentStatus != TrafficLightStatus.Standby)
-           {
-               this.switchToStatus(TrafficLightStatus.Standby);
-           }
-           else if (this.currentStatus == TrafficLightStatus.Standby)
-           {
-               this.switchToStatus(TrafficLightStatus.Off);
-           }
+            {
+                this.switchToStatus(TrafficLightStatus.Standby);
+            }
+            else if (this.currentStatus == TrafficLightStatus.Standby)
+            {
+                this.switchToStatus(TrafficLightStatus.Off);
+            }
             else
             {
                 Console.WriteLine("Traffic Light is already offline!");
@@ -69,7 +70,7 @@ namespace TrafficLightUI
         public TrafficLightStatus switchStatus()
         {
             TrafficLightStatus nextStatus;
-            
+
             // Handle special case if Traffic Light is off or in standby
             if (currentStatus == TrafficLightStatus.Off || currentStatus == TrafficLightStatus.Standby)
             {
@@ -90,7 +91,7 @@ namespace TrafficLightUI
 
                 nextStatus = this.statusOrder[nextStatusIndex];
             }
-            
+
             // Switch Status
             this.switchToStatus(nextStatus);
             return nextStatus;
@@ -108,6 +109,7 @@ namespace TrafficLightUI
                     this.switchToStatus(TrafficLightStatus.Stop);
                     await Task.Delay(5000); // Sleep
                 }
+
                 this.currentStatus = TrafficLightStatus.Standby;
             }
 
@@ -121,6 +123,7 @@ namespace TrafficLightUI
                     this.switchToStatus(TrafficLightStatus.Standby);
                     await Task.Delay(5000); // Sleep
                 }
+
                 this.currentStatus = TrafficLightStatus.Off;
             }
 
