@@ -1,12 +1,13 @@
 using System;
 using Avalonia.Threading;
+using TrafficLightUI.ViewModels;
 
 namespace TrafficLightUI
 {
     public class CrossRoad
     {
         private DispatcherTimer timer;
-        private TrafficLight trafficLight;
+        private TrafficLightWindowViewModel trafficLight; // TODO optimize this!!!
 
         public bool isAutomatic
         {
@@ -14,7 +15,7 @@ namespace TrafficLightUI
             set { }
         }
 
-        public CrossRoad(TrafficLight trafficLight)
+        public CrossRoad(TrafficLightWindowViewModel trafficLight)
         {
             this.trafficLight = trafficLight;
 
@@ -38,7 +39,7 @@ namespace TrafficLightUI
 
         private void onTick(object sender, EventArgs e)
         {
-            this.trafficLight.switchStatus();
+            this.trafficLight.trafficLight.switchStatus();
         }
 
         public string start()
@@ -47,7 +48,7 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
-                error = this.trafficLight.start();
+                error = this.trafficLight.trafficLight.start();
             }
             else
             {
@@ -63,7 +64,7 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
-                error = this.trafficLight.stop(); 
+                error = this.trafficLight.trafficLight.stop(); 
             }
             else
             {
@@ -75,7 +76,7 @@ namespace TrafficLightUI
 
         public void manualSwitch()
         {
-            this.trafficLight.switchStatus();
+            this.trafficLight.trafficLight.switchStatus();
         }
     }
 }

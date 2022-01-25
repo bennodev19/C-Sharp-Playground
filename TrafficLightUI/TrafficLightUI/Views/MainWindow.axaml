@@ -36,42 +36,6 @@
        <DockPanel
            Margin="40">
            
-           <!-- Traffic Light -->
-           <StackPanel 
-               VerticalAlignment="Center" 
-               HorizontalAlignment="Left" 
-               Background="black"
-           >
-               
-               <Border
-                   Width="100"
-                   Height="100"
-                   Margin="10"
-                   BorderBrush="Black"
-                   BorderThickness="2"
-                   CornerRadius="100"
-                   Background="{Binding topLightColor}"/>
-               
-               <Border
-                   Width="100"
-                   Height="100"
-                   Margin="10"
-                   BorderBrush="Black"
-                   BorderThickness="2"
-                   CornerRadius="100"
-                   Background="{Binding centerLightColor}"/>
-               
-               <Border
-                   Width="100"
-                   Height="100"
-                   Margin="10"
-                   BorderBrush="Black"
-                   BorderThickness="2"
-                   CornerRadius="100"
-                   Background="{Binding bottomLightColor}"/>
-               
-           </StackPanel>
-           
            <!-- Input -->
            
            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 0 0 0" Width="200">

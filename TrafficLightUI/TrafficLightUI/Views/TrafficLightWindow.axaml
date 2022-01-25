@@ -1,0 +1,70 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:TrafficLightUI.ViewModels"
+    mc:Ignorable="d"
+    d:DesignWidth="800"
+    d:DesignHeight="450"
+    x:Class="TrafficLightUI.Views.TrafficLightWindow"
+    Title="TrafficLightWindow">
+
+    <!-- Assign corresponding ViewModel to this View -->
+    <Design.DataContext>
+        <vm:TrafficLightWindowViewModel />
+    </Design.DataContext>
+
+    <Panel>
+        <!-- Background Layer to make the content in the blurry window more readable 
+             (https://docs.avaloniaui.net/tutorials/music-store-app/creating-a-modern-looking-window) -->
+        <ExperimentalAcrylicBorder
+            IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <!-- Content -->
+
+        <!-- Traffic Light -->
+        <StackPanel
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Background="black">
+
+            <Border
+                Width="100"
+                Height="100"
+                Margin="10"
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="100"
+                Background="{Binding topLightColor}" />
+
+            <Border
+                Width="100"
+                Height="100"
+                Margin="10"
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="100"
+                Background="{Binding centerLightColor}" />
+
+            <Border
+                Width="100"
+                Height="100"
+                Margin="10"
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="100"
+                Background="{Binding bottomLightColor}" />
+
+        </StackPanel>
+
+    </Panel>
+</Window>
