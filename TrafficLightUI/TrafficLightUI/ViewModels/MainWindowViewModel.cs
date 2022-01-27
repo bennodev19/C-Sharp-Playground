@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using ReactiveUI;
 
 namespace TrafficLightUI.ViewModels
@@ -38,11 +39,16 @@ namespace TrafficLightUI.ViewModels
         private CrossRoad crossRoad;
         private bool isStandby = false;
 
+        // TODO show each Traffic Light in separate window (https://docs.avaloniaui.net/tutorials/music-store-app/opening-a-dialog)
+        public ObservableCollection<TrafficLightViewModel> Items { get; } = new();
+
         public MainWindowViewModel()
         {
-            // TODO show traffic window in separate window (https://docs.avaloniaui.net/tutorials/music-store-app/opening-a-dialog)
-            TrafficLightWindowViewModel trafficLight = new TrafficLightWindowViewModel();
-            crossRoad = new CrossRoad(trafficLight);
+            
+            // Create Traffic Lights and Cross Road (TODO needs to be optimized)
+            TrafficLightViewModel trafficLightViewModel = new TrafficLightViewModel();
+            Items.Add(trafficLightViewModel);
+            crossRoad = new CrossRoad(trafficLightViewModel);
 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });

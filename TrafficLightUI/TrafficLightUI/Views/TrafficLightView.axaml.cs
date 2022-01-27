@@ -4,14 +4,11 @@ using Avalonia.Markup.Xaml;
 
 namespace TrafficLightUI.Views
 {
-    public class TrafficLightWindow : Window
+    public class TrafficLightView : UserControl
     {
-        public TrafficLightWindow()
+        public TrafficLightView()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
         }
 
         private void InitializeComponent()

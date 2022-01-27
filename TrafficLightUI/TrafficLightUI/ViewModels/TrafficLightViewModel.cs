@@ -3,7 +3,7 @@ using ReactiveUI;
 
 namespace TrafficLightUI.ViewModels
 {
-    public class TrafficLightWindowViewModel : ViewModelBase
+    public class TrafficLightViewModel : ViewModelBase
     {
         // Traffic Lights (Note: Lights of the Traffic Light)
         private string? _topLightColor = "gray";
@@ -43,7 +43,7 @@ namespace TrafficLightUI.ViewModels
         public TrafficLight trafficLight;
         private bool isStandby = false;
 
-        public TrafficLightWindowViewModel()
+        public TrafficLightViewModel()
         {
             this.trafficLight = new TrafficLight(this.handleTrafficLightStatus);
         }

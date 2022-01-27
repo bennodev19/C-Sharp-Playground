@@ -1,4 +1,4 @@
-<Window
+<UserControl
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,12 +7,11 @@
     mc:Ignorable="d"
     d:DesignWidth="800"
     d:DesignHeight="450"
-    x:Class="TrafficLightUI.Views.TrafficLightWindow"
-    Title="TrafficLightWindow">
+    x:Class="TrafficLightUI.Views.TrafficLightView">
 
     <!-- Assign corresponding ViewModel to this View -->
     <Design.DataContext>
-        <vm:TrafficLightWindowViewModel />
+        <vm:TrafficLightViewModel />
     </Design.DataContext>
 
     <Panel>
@@ -67,4 +66,4 @@
         </StackPanel>
 
     </Panel>
-</Window>
+</UserControl>

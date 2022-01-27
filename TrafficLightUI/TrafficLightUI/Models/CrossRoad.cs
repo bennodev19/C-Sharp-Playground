@@ -7,7 +7,7 @@ namespace TrafficLightUI
     public class CrossRoad
     {
         private DispatcherTimer timer;
-        private TrafficLightWindowViewModel trafficLight; // TODO optimize this!!!
+        private TrafficLightViewModel trafficLight; // TODO optimize this!!!
 
         public bool isAutomatic
         {
@@ -15,7 +15,7 @@ namespace TrafficLightUI
             set { }
         }
 
-        public CrossRoad(TrafficLightWindowViewModel trafficLight)
+        public CrossRoad(TrafficLightViewModel trafficLight)
         {
             this.trafficLight = trafficLight;
 
