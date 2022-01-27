@@ -48,6 +48,7 @@ namespace TrafficLightUI.ViewModels
             // Create Traffic Lights and Cross Road (TODO needs to be optimized)
             TrafficLightViewModel trafficLightViewModel = new TrafficLightViewModel();
             Items.Add(trafficLightViewModel);
+            Items.Add(trafficLightViewModel);
             crossRoad = new CrossRoad(trafficLightViewModel);
 
             // Setup Button callbacks
