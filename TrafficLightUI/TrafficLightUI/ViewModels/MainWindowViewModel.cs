@@ -45,7 +45,7 @@ namespace TrafficLightUI.ViewModels
         {
             int padding = 5;
 
-            // Create TrafficLights
+            // Create Traffic Lights
             TrafficLight[] trafficLights =
             {
                 createTrafficLight("t_N", "r_1", new PixelPoint(0, 190 + padding)),
@@ -54,7 +54,7 @@ namespace TrafficLightUI.ViewModels
                 createTrafficLight("t_W", "r_2", new PixelPoint(-140 - padding, 0))
             };
 
-            // CrossRoad switch order
+            // Cross Road switch order
             var switchOrder = new[]
             {
                 new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>() {
