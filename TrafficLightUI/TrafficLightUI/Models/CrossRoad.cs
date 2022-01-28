@@ -21,7 +21,7 @@ namespace TrafficLightUI
             // Instantiate Timer
             this.timer = new DispatcherTimer();
             this.timer.Tick += new EventHandler(onTick);
-            this.timer.Interval = new TimeSpan(0, 0, 1);
+            this.timer.Interval = new TimeSpan(0, 0, 1); // TODO update speed
         }
 
         public void toggleAutomatic()

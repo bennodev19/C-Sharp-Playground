@@ -6,7 +6,7 @@
     xmlns:vm="using:TrafficLightUI.ViewModels"
     mc:Ignorable="d"
     Width="120"
-    Height="360"
+    Height="400"
     x:Class="TrafficLightUI.Views.TrafficLightWindow"
     Icon="/Assets/avalonia-logo.ico"
     Title="Light"
@@ -40,7 +40,7 @@
         <StackPanel
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
-            Background="black">
+            Background="Transparent">
 
             <Border
                 Width="100"
