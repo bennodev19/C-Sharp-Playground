@@ -1,12 +1,21 @@
 using System;
 using Avalonia.Threading;
+using DynamicData;
 
 namespace TrafficLightUI
 {
     public class CrossRoad
     {
         private DispatcherTimer timer;
+        
+        // TrafficLights the Cross Road contains
         private TrafficLight[] trafficLights;
+        
+        // Order of Status that can be taken by an active Cross Road
+        private CrossRoadStatus[] statusOrder;
+        
+        // Current active Cross Road Status
+        private CrossRoadStatus currentStatus;
 
         public bool isAutomatic
         {
@@ -14,9 +23,10 @@ namespace TrafficLightUI
             set { }
         }
 
-        public CrossRoad(TrafficLight[] trafficLights)
+        public CrossRoad(TrafficLight[] trafficLights, CrossRoadStatus[] statusOrder)
         {
             this.trafficLights = trafficLights;
+            this.statusOrder = statusOrder;
 
             // Instantiate Timer
             this.timer = new DispatcherTimer();
@@ -47,6 +57,7 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
+                // Start all Traffic Lights
                 foreach (var trafficLight in this.trafficLights)
                 {
                     trafficLight.start();
@@ -67,6 +78,7 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
+                // Stop all Traffic Lights
                 foreach (var trafficLight in this.trafficLights)
                 {
                     error = trafficLight.stop();
@@ -83,7 +95,40 @@ namespace TrafficLightUI
 
         public void switchStatus()
         {
-            // TODO
+            CrossRoadStatus nextStatus = null;
+            
+            // Handle initial Cross Road Status
+            if (this.currentStatus == null)
+            {
+                nextStatus = this.statusOrder[0];
+            }
+            else
+            // Handle next Cross Road Status based on the 'statusOrder'
+            {
+                int currentStatusIndex = this.statusOrder.IndexOf(this.currentStatus);
+                if (currentStatusIndex == this.statusOrder.Length - 1)
+                {
+                    nextStatus = this.statusOrder[0];
+                }
+                else
+                {
+                    nextStatus = this.statusOrder[currentStatusIndex + 1];
+                }
+            }
+            
+            // Apply next Cross Road Status to the Traffic Lights
+            nextStatus.status.ForEach((status) =>
+            {
+                foreach (var trafficLight in this.trafficLights)
+                {
+                    if (trafficLight.id == status.Key || trafficLight.switchRowId == status.Key)
+                    {
+                        trafficLight.switchToStatus(status.Value);
+                    }
+                }
+            });
+            
+            this.currentStatus = nextStatus;
         }
     }
 }

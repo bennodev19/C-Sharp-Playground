@@ -43,7 +43,9 @@
            
             <!-- Input -->
            
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="40 0 0 0" Width="200">
+            <StackPanel 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center">
                
                 <DockPanel
                     Margin="0 10">

@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.Generic;
+using System.Windows.Input;
+using Avalonia;
 using ReactiveUI;
 using TrafficLightUI.Views;
 
@@ -41,17 +43,63 @@ namespace TrafficLightUI.ViewModels
 
         public MainWindowViewModel()
         {
+            int padding = 5;
+
             // Create TrafficLights
             TrafficLight[] trafficLights =
             {
-                createTrafficLight("N", "r1"),
-                createTrafficLight("O", "r2"),
-                createTrafficLight("S", "r1"), 
-                createTrafficLight("W", "r2")
+                createTrafficLight("t_N", "r_1", new PixelPoint(0, 190 + padding)),
+                createTrafficLight("t_O", "r_2", new PixelPoint(140 + padding, 0)),
+                createTrafficLight("t_S", "r_1", new PixelPoint(0, -190 - padding)),
+                createTrafficLight("t_W", "r_2", new PixelPoint(-140 - padding, 0))
             };
 
+            // CrossRoad switch order
+            var switchOrder = new[]
+            {
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>() {
+                    new("r_1", TrafficLightStatus.Stop),
+                    new("r_2", TrafficLightStatus.Stop),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Prepare),
+                    new("r_2", TrafficLightStatus.Stop),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Go),
+                    new("r_2", TrafficLightStatus.Stop),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Warning),
+                    new("r_2", TrafficLightStatus.Stop),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Stop),
+                    new("r_2", TrafficLightStatus.Stop),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Stop),
+                    new("r_2", TrafficLightStatus.Prepare),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Stop),
+                    new("r_2", TrafficLightStatus.Go),
+                }),
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
+                    new("r_1", TrafficLightStatus.Stop),
+                    new("r_2", TrafficLightStatus.Warning),
+                }),
+            };
+            
             // Create Cross Road
-            crossRoad = new CrossRoad(trafficLights);
+            crossRoad = new CrossRoad(trafficLights, switchOrder);
 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
@@ -87,7 +135,7 @@ namespace TrafficLightUI.ViewModels
             this._uiNote = "";
         }
 
-        private TrafficLight createTrafficLight(string id, string? trafficLightRowId)
+        private TrafficLight createTrafficLight(string id, string trafficLightRowId, PixelPoint position)
         {
             // Create TrafficLight ViewModel
             TrafficLightViewModel trafficLightViewModel = new TrafficLightViewModel(id, trafficLightRowId);
@@ -96,6 +144,8 @@ namespace TrafficLightUI.ViewModels
             TrafficLightWindow trafficLightWindow = new TrafficLightWindow();
             trafficLightWindow.Show();
             trafficLightWindow.DataContext = trafficLightViewModel;
+            trafficLightWindow.Position = new PixelPoint(trafficLightWindow.Position.X + position.X,
+                trafficLightWindow.Position.Y + position.Y);
 
             return trafficLightViewModel.trafficLight;
         }

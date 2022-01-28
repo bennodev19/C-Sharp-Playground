@@ -5,13 +5,15 @@ namespace TrafficLightUI
 {
     public class TrafficLight
     {
-        // Key/Name of the TrafficLight
+        // Key/Name identifier of the TrafficLight
         public string id;
-
+        
+        // Key/Name identifier of the switch row the Traffic Light belongs to
+        // (A switch row specifies Traffic Lights that should always have the same status)
         public string? switchRowId;
         
+        // Current active TrafficLight Status
         private TrafficLightStatus _currentStatus;
-
         private TrafficLightStatus currentStatus
         {
             get { return _currentStatus; }
@@ -22,7 +24,7 @@ namespace TrafficLightUI
             }
         }
 
-        // Order of Statuses that can actually be displayed by a Traffic Light that is active
+        // Order of Status that can be taken by an active Traffic Light
         private TrafficLightStatus[] statusOrder = new TrafficLightStatus[]
             {TrafficLightStatus.Stop, TrafficLightStatus.Prepare, TrafficLightStatus.Go, TrafficLightStatus.Warning};
 
