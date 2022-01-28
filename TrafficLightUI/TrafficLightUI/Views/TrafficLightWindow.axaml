@@ -1,13 +1,19 @@
-<UserControl
+<Window
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:TrafficLightUI.ViewModels"
     mc:Ignorable="d"
-    d:DesignWidth="800"
-    d:DesignHeight="450"
-    x:Class="TrafficLightUI.Views.TrafficLightView">
+    Width="120"
+    Height="360"
+    x:Class="TrafficLightUI.Views.TrafficLightWindow"
+    Icon="/Assets/avalonia-logo.ico"
+    Title="Light"
+    WindowStartupLocation="CenterScreen"
+    Background="Transparent"
+    TransparencyLevelHint="AcrylicBlur"
+    ExtendClientAreaToDecorationsHint="True">
 
     <!-- Assign corresponding ViewModel to this View -->
     <Design.DataContext>
@@ -66,4 +72,4 @@
         </StackPanel>
 
     </Panel>
-</UserControl>
+</Window>

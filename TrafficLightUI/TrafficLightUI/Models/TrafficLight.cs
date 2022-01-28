@@ -5,6 +5,11 @@ namespace TrafficLightUI
 {
     public class TrafficLight
     {
+        // Key/Name of the TrafficLight
+        public string id;
+
+        public string? switchRowId;
+        
         private TrafficLightStatus _currentStatus;
 
         private TrafficLightStatus currentStatus
@@ -21,10 +26,13 @@ namespace TrafficLightUI
         private TrafficLightStatus[] statusOrder = new TrafficLightStatus[]
             {TrafficLightStatus.Stop, TrafficLightStatus.Prepare, TrafficLightStatus.Go, TrafficLightStatus.Warning};
 
+        // Callback to apply changes to the UI
         private Action<TrafficLightStatus> trafficLightCallback;
 
-        public TrafficLight(Action<TrafficLightStatus> trafficLightCallback)
+        public TrafficLight(string id, Action<TrafficLightStatus> trafficLightCallback, string? switchRowId)
         {
+            this.id = id;
+            this.switchRowId = switchRowId;
             this.trafficLightCallback = trafficLightCallback;
             this.currentStatus = TrafficLightStatus.Off;
         }

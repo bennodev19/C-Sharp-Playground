@@ -43,9 +43,9 @@ namespace TrafficLightUI.ViewModels
         public TrafficLight trafficLight;
         private bool isStandby = false;
 
-        public TrafficLightViewModel()
+        public TrafficLightViewModel(string id, string? trafficLightRowId)
         {
-            this.trafficLight = new TrafficLight(this.handleTrafficLightStatus);
+            this.trafficLight = new TrafficLight(id, this.handleTrafficLightStatus, trafficLightRowId);
         }
 
         private async void handleTrafficLightStatus(TrafficLightStatus status)

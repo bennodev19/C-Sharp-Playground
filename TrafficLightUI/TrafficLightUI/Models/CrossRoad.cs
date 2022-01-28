@@ -1,13 +1,12 @@
 using System;
 using Avalonia.Threading;
-using TrafficLightUI.ViewModels;
 
 namespace TrafficLightUI
 {
     public class CrossRoad
     {
         private DispatcherTimer timer;
-        private TrafficLightViewModel trafficLight; // TODO optimize this!!!
+        private TrafficLight[] trafficLights;
 
         public bool isAutomatic
         {
@@ -15,9 +14,9 @@ namespace TrafficLightUI
             set { }
         }
 
-        public CrossRoad(TrafficLightViewModel trafficLight)
+        public CrossRoad(TrafficLight[] trafficLights)
         {
-            this.trafficLight = trafficLight;
+            this.trafficLights = trafficLights;
 
             // Instantiate Timer
             this.timer = new DispatcherTimer();
@@ -39,7 +38,7 @@ namespace TrafficLightUI
 
         private void onTick(object sender, EventArgs e)
         {
-            this.trafficLight.trafficLight.switchStatus();
+            this.switchStatus();
         }
 
         public string start()
@@ -48,7 +47,11 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
-                error = this.trafficLight.trafficLight.start();
+                foreach (var trafficLight in this.trafficLights)
+                {
+                    trafficLight.start();
+                    if (error != null) break;
+                }
             }
             else
             {
@@ -64,7 +67,11 @@ namespace TrafficLightUI
 
             if (!isAutomatic)
             {
-                error = this.trafficLight.trafficLight.stop(); 
+                foreach (var trafficLight in this.trafficLights)
+                {
+                    error = trafficLight.stop();
+                    if(error != null) break;
+                }
             }
             else
             {
@@ -74,9 +81,9 @@ namespace TrafficLightUI
             return error;
         }
 
-        public void manualSwitch()
+        public void switchStatus()
         {
-            this.trafficLight.trafficLight.switchStatus();
+            // TODO
         }
     }
 }

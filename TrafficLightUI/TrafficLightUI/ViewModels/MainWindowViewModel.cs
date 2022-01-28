@@ -1,6 +1,6 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using ReactiveUI;
+using TrafficLightUI.Views;
 
 namespace TrafficLightUI.ViewModels
 {
@@ -39,17 +39,19 @@ namespace TrafficLightUI.ViewModels
         private CrossRoad crossRoad;
         private bool isStandby = false;
 
-        // TODO show each Traffic Light in separate window (https://docs.avaloniaui.net/tutorials/music-store-app/opening-a-dialog)
-        public ObservableCollection<TrafficLightViewModel> Items { get; } = new();
-
         public MainWindowViewModel()
         {
-            
-            // Create Traffic Lights and Cross Road (TODO needs to be optimized)
-            TrafficLightViewModel trafficLightViewModel = new TrafficLightViewModel();
-            Items.Add(trafficLightViewModel);
-            Items.Add(trafficLightViewModel);
-            crossRoad = new CrossRoad(trafficLightViewModel);
+            // Create TrafficLights
+            TrafficLight[] trafficLights =
+            {
+                createTrafficLight("N", "r1"),
+                createTrafficLight("O", "r2"),
+                createTrafficLight("S", "r1"), 
+                createTrafficLight("W", "r2")
+            };
+
+            // Create Cross Road
+            crossRoad = new CrossRoad(trafficLights);
 
             // Setup Button callbacks
             this.onStart = ReactiveCommand.Create(async () => { this._onStart(); });
@@ -85,6 +87,23 @@ namespace TrafficLightUI.ViewModels
             this._uiNote = "";
         }
 
+        private TrafficLight createTrafficLight(string id, string? trafficLightRowId)
+        {
+            // Create TrafficLight ViewModel
+            TrafficLightViewModel trafficLightViewModel = new TrafficLightViewModel(id, trafficLightRowId);
+
+            // Create TrafficLight Window
+            TrafficLightWindow trafficLightWindow = new TrafficLightWindow();
+            trafficLightWindow.Show();
+            trafficLightWindow.DataContext = trafficLightViewModel;
+
+            return trafficLightViewModel.trafficLight;
+        }
+
+        // ===============================================================
+        // UI-Callbacks
+        // ===============================================================
+
         private void _onStart()
         {
             resetUINote();
@@ -105,7 +124,7 @@ namespace TrafficLightUI.ViewModels
         {
             resetUINote();
 
-            this.crossRoad.manualSwitch();
+            this.crossRoad.switchStatus();
         }
 
         private void _onAutomatic()
