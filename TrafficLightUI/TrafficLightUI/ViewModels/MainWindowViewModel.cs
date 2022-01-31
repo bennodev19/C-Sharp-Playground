@@ -57,7 +57,8 @@ namespace TrafficLightUI.ViewModels
             // Cross Road switch order
             var switchOrder = new[]
             {
-                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>() {
+                new CrossRoadStatus(new List<KeyValuePair<string, TrafficLightStatus>>()
+                {
                     new("r_1", TrafficLightStatus.Stop),
                     new("r_2", TrafficLightStatus.Stop),
                 }),
@@ -97,7 +98,7 @@ namespace TrafficLightUI.ViewModels
                     new("r_2", TrafficLightStatus.Warning),
                 }),
             };
-            
+
             // Create Cross Road
             crossRoad = new CrossRoad(trafficLights, switchOrder);
 
@@ -183,5 +184,10 @@ namespace TrafficLightUI.ViewModels
 
             crossRoad.toggleAutomatic();
         }
-    }
+
+        private void _onEnd()
+        {
+           // TODO
+        }
+}
 }
