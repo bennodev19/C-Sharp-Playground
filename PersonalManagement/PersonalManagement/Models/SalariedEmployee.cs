@@ -40,7 +40,7 @@ namespace PersonalManagement.Models
 
         public override string ToString()
         {
-            return base.ToString() + "| SalariedEmployee: [bruttoSalary: " + this.bruttoSalary + "]";
+            return base.ToString() + ": [bruttoSalary: " + this.bruttoSalary + "]";
         }
     }
 }
