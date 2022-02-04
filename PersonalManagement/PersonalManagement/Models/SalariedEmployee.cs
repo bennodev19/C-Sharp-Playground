@@ -4,14 +4,14 @@ namespace PersonalManagement.Models
     {
         private double bruttoSalary;
 
-        public SalariedEmployee() : base("TheSecond", "Jeff")
+        public SalariedEmployee() : base("Unknown", "Mr")
         {
-            // do nothing?
+            this.setBruttoSalary(0);
         }
 
         public SalariedEmployee(string lastName, string firstName, double bruttoSalary) : base(lastName, firstName)
         {
-            this.bruttoSalary = bruttoSalary;
+            this.setBruttoSalary(bruttoSalary);
         }
 
         // ===================================================================================

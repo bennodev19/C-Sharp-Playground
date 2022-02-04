@@ -7,8 +7,8 @@ namespace PersonalManagement.Models
 
         public Employee(string lastName, string firstName)
         {
-            this.lastName = lastName;
-            this.firstName = firstName;
+            this.setLastName(lastName);
+            this.setFirstName(firstName);
         }
 
         // ===================================================================================
@@ -20,17 +20,17 @@ namespace PersonalManagement.Models
             return this.lastName;
         }
 
+        private void setLastName(string value)
+        {
+            this.lastName = value;
+        }
+
         public string getFirstName()
         {
             return this.firstName;
         }
 
-        public void setLastName(string value)
-        {
-            this.lastName = value;
-        }
-
-        public void setFirstName(string value)
+        private void setFirstName(string value)
         {
             this.firstName = value;
         }
@@ -38,7 +38,7 @@ namespace PersonalManagement.Models
         // ===================================================================================
         // Overwritten
         // ===================================================================================
-        
+
         public override string ToString()
         {
             return base.ToString() + ": [lastName: '" + this.lastName + "', firstName: '" + this.firstName + "']";

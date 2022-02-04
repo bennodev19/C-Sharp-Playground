@@ -5,16 +5,22 @@ namespace PersonalManagement.Models
         private int workedHours;
         private double hoursSalary;
 
-        public Worker() : base("TheFirst", "Jeff")
+        public Worker() : base("Unknown", "Mr")
         {
-            // do nothing?
+            this.setWorkedHours(0);
+            this.setHoursSalary(0);
         }
 
         public Worker(string lastName, string firstName, int workedHours, double hoursSalary) : base(lastName,
             firstName)
         {
-            this.workedHours = workedHours;
-            this.hoursSalary = hoursSalary;
+            this.setWorkedHours(workedHours);
+            this.setHoursSalary(hoursSalary);
+        }
+
+        public double getBrutto()
+        {
+            return this.hoursSalary * this.workedHours;
         }
 
         // ===================================================================================
@@ -53,15 +59,13 @@ namespace PersonalManagement.Models
             return isValid;
         }
 
-
         // ===================================================================================
         // Overwritten
         // ===================================================================================
 
         public override string ToString()
         {
-            return base.ToString() + ": [workedHours: '" + this.workedHours + "', hoursSalary: '" + hoursSalary +
-                   "']";
+            return base.ToString() + ": [workedHours: '" + this.workedHours + "', hoursSalary: '" + hoursSalary + "']";
         }
     }
 }

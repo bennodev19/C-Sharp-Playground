@@ -9,11 +9,11 @@ namespace PersonalManagement.ViewModels
     {
         public MainWindowViewModel()
         {
-            SalariedEmployee jeff = new SalariedEmployee("Hello", "Jeff", 80000);
-            Worker jeff2 = new Worker("Bye", "Jeff", 9, 18);
+            SalariedEmployee jeff = new SalariedEmployee("Bezos", "Jeff", 80000);
+            Worker elon = new Worker("Musk", "Elon", 9, 18);
 
             Console.WriteLine("Jeff: " + jeff.ToString());
-            Console.WriteLine("Jeff2: " + jeff2.ToString());
+            Console.WriteLine("Elon: " + elon.ToString());
         }
     }
 }
