@@ -41,7 +41,7 @@ namespace PersonalManagement.Models
         
         public override string ToString()
         {
-            return base.ToString() + ": [lastName: " + this.lastName + "firstName: " + this.firstName + "]";
+            return base.ToString() + ": [lastName: '" + this.lastName + "', firstName: '" + this.firstName + "']";
         }
     }
 }

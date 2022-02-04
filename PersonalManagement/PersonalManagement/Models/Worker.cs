@@ -60,8 +60,8 @@ namespace PersonalManagement.Models
 
         public override string ToString()
         {
-            return base.ToString() + ": [workedHours: " + this.workedHours + ", hoursSalary: " + hoursSalary +
-                   "]";
+            return base.ToString() + ": [workedHours: '" + this.workedHours + "', hoursSalary: '" + hoursSalary +
+                   "']";
         }
     }
 }
