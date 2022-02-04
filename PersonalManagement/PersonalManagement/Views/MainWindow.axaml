@@ -1,0 +1,41 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:PersonalManagement.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="800"
+    d:DesignHeight="450"
+    x:Class="PersonalManagement.Views.MainWindow"
+    Icon="/Assets/avalonia-logo.ico"
+    Title="PersonalManagement"
+    WindowStartupLocation="CenterScreen"
+    Background="Transparent"
+    TransparencyLevelHint="AcrylicBlur"
+    ExtendClientAreaToDecorationsHint="True">
+
+    <!-- Assign corresponding ViewModel to this View -->
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Panel>
+        <!-- Background Layer to make the content in the blurry window more readable 
+             (https://docs.avaloniaui.net/tutorials/music-store-app/creating-a-modern-looking-window) -->
+        <ExperimentalAcrylicBorder
+            IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <!-- Content -->
+        <!-- TODO -->
+
+    </Panel>
+</Window>
