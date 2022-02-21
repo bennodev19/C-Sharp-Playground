@@ -20,6 +20,18 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
+    <!-- Styles -->
+    <Window.Styles>
+
+        <Style
+            Selector="TabItem">
+            <Setter
+                Property="FontSize"
+                Value="12" />
+        </Style>
+
+    </Window.Styles>
+
     <Panel>
         <!-- Background Layer to make the content in the blurry window more readable 
              (https://docs.avaloniaui.net/tutorials/music-store-app/creating-a-modern-looking-window) -->
@@ -35,7 +47,108 @@
         </ExperimentalAcrylicBorder>
 
         <!-- Content -->
-        <!-- TODO -->
+        <DockPanel
+            Margin="40">
+
+            <!-- Employee Input -->
+            <StackPanel>
+                <TabControl >
+                
+                    <!-- Salaried Employee -->
+                    <TabItem
+                        Header="SalariedEmployee"
+                        VerticalContentAlignment="Center">
+
+                        <StackPanel  
+                            Margin="0 10">
+                            <TextBox
+                                Name="SalariedEmployeeFirstNameInput"
+                                Text="{Binding employeeFirstName}"
+                                Watermark="First Name"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+
+                            <TextBox
+                                Name="SalariedEmployeeLastNameInput"
+                                Text="{Binding employeeLastName}"
+                                Watermark="Last Name"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+
+                            <TextBox
+                                Name="SalariedEmployeeSalaryInput"
+                                Text="{Binding salariedEmployeeSalary}"
+                                Watermark="Salary"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+                        </StackPanel>
+                    </TabItem>
+
+                    <!-- Worker -->
+                    <TabItem>
+                        <TabItem.Header>
+                            <TextBlock
+                                VerticalAlignment="Center">
+                                Worker
+                            </TextBlock>
+                        </TabItem.Header>
+                        <StackPanel
+                            Margin="0 10">
+                            <TextBox
+                                Name="WorkerFirstNameInput"
+                                Text="{Binding employeeFirstName}"
+                                Watermark="First Name"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+
+                            <TextBox
+                                Name="WorkerLastNameInput"
+                                Text="{Binding employeeLastName}"
+                                Watermark="Last Name"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+                        
+                            <TextBox
+                                Name="WorkedHoursInput"
+                                Text="{Binding workerWorkedHours}"
+                                Watermark="Worked Hours"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+
+                            <TextBox
+                                Name="HoursSalaryInput"
+                                Text="{Binding workerHoursSalary}"
+                                Watermark="Hours Salary"
+                                Width="200"
+                                HorizontalAlignment="Left" />
+                        </StackPanel>
+                    </TabItem>
+                
+                </TabControl>
+
+                <Button
+                    Name="AddButton"
+                    Command="{Binding onAdd }"
+                    Content="Submit"
+                    Width="100"
+                    HorizontalAlignment="Left" />
+            
+            </StackPanel>
+
+            <!-- List Employees -->
+            <StackPanel>
+
+                <Button
+                    Name="ShowAllButton"
+                    Command="{Binding onShowAll }"
+                    Content="Show All"
+                    Width="100"
+                    HorizontalAlignment="Left" />
+               
+            </StackPanel>
+            
+        </DockPanel>
+
 
     </Panel>
 </Window>
