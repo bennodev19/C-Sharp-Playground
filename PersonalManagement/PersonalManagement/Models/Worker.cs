@@ -18,6 +18,11 @@ namespace PersonalManagement.Models
             this.setHoursSalary(hoursSalary);
         }
 
+        public override string output()
+        {
+            return this.ToString();
+        }
+
         public double getBrutto()
         {
             return this.hoursSalary * this.workedHours;

@@ -138,6 +138,11 @@
             <!-- List Employees -->
             <StackPanel>
 
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="{Binding output}" />
+                
                 <Button
                     Name="ShowAllButton"
                     Command="{Binding onShowAll }"

@@ -1,3 +1,6 @@
+using System;
+using System.Drawing.Printing;
+
 namespace PersonalManagement.Models
 {
     public class Employee
@@ -9,6 +12,12 @@ namespace PersonalManagement.Models
         {
             this.setLastName(lastName);
             this.setFirstName(firstName);
+        }
+
+        public virtual string output()
+        {
+            Console.WriteLine("Nothing to print!");
+            return "undefined";
         }
 
         // ===================================================================================

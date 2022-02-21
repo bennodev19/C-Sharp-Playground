@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PersonalManagement.Models
 {
@@ -28,6 +29,21 @@ namespace PersonalManagement.Models
         public void addEmployee(Employee employee)
         {
             this.employees.Add(employee);
+        }
+
+        // ===================================================================================
+        // Overwritten
+        // ===================================================================================
+
+        public override string ToString()
+        {
+            string output = "";
+            foreach (var employee in this.employees)
+            {
+                output += employee.output() + "\n";
+            }
+
+            return output;
         }
     }
 }

@@ -68,6 +68,17 @@ namespace PersonalManagement.ViewModels
             set => this.RaiseAndSetIfChanged(ref _workerWorkedHours, value);
         }
 
+        private string? _output;
+
+        public string? output
+        {
+            get => _output;
+            // RaiseAndSetIfChanged() notifies (re-renders) the UI if it is called
+            // -> everytime the ItemName property is updated it is called in the setter method.
+            // https://docs.avaloniaui.net/docs/data-binding/change-notifications
+            set => this.RaiseAndSetIfChanged(ref _output, value);
+        }
+
         private EmployeeManager employeeManager;
 
         public MainWindowViewModel()
@@ -143,7 +154,7 @@ namespace PersonalManagement.ViewModels
 
         private void showAllEmployees()
         {
-            // TODO
+            this.output = this.employeeManager.ToString();
         }
     }
 }
