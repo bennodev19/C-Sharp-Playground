@@ -68,6 +68,7 @@ namespace PersonalManagement.ViewModels
             set => this.RaiseAndSetIfChanged(ref _workerWorkedHours, value);
         }
 
+        // or using a ListBox (https://docs.avaloniaui.net/docs/controls/listbox)
         private string? _output;
 
         public string? output
@@ -83,13 +84,11 @@ namespace PersonalManagement.ViewModels
 
         public MainWindowViewModel()
         {
-            // TODO REMOVE ---
-            SalariedEmployee jeff = new SalariedEmployee("Bezos", "Jeff", 80000);
-            Worker elon = new Worker("Musk", "Elon", 9, 18);
-
-            Console.WriteLine("Jeff: " + jeff.ToString());
-            Console.WriteLine("Elon: " + elon.ToString());
-            // TODO REMOVE ---
+            // SalariedEmployee jeff = new SalariedEmployee("Bezos", "Jeff", 80000);
+            // Worker elon = new Worker("Musk", "Elon", 9, 18);
+            //
+            // Console.WriteLine("Jeff: " + jeff.ToString());
+            // Console.WriteLine("Elon: " + elon.ToString());
 
             this.employeeManager = new EmployeeManager();
 

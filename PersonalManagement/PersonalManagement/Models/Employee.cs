@@ -3,7 +3,7 @@ using System.Drawing.Printing;
 
 namespace PersonalManagement.Models
 {
-    public class Employee
+    public abstract class Employee
     {
         private string lastName;
         private string firstName;
