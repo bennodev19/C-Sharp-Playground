@@ -84,12 +84,6 @@ namespace PersonalManagement.ViewModels
 
         public MainWindowViewModel()
         {
-            // SalariedEmployee jeff = new SalariedEmployee("Bezos", "Jeff", 80000);
-            // Worker elon = new Worker("Musk", "Elon", 9, 18);
-            //
-            // Console.WriteLine("Jeff: " + jeff.ToString());
-            // Console.WriteLine("Elon: " + elon.ToString());
-
             this.employeeManager = new EmployeeManager();
 
             // Register Callbacks
@@ -99,7 +93,7 @@ namespace PersonalManagement.ViewModels
 
         private bool addEmployee()
         {
-            // Add Worker (TODO optimize)
+            // Add Worker (TODO optimize selection)
             if (this.workerHoursSalary.HasValue || this.workerWorkedHours.HasValue)
             {
                 // Validate Worker
@@ -116,7 +110,7 @@ namespace PersonalManagement.ViewModels
                     this.workerWorkedHours.Value,
                     this.workerHoursSalary.Value);
             }
-            // Add salaried Employee (TODO optimize)
+            // Add salaried Employee (TODO optimize selection)
             else if (this.salariedEmployeeSalary.HasValue)
             {
                 // Validate salaried Employee

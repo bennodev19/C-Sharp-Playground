@@ -14,11 +14,7 @@ namespace PersonalManagement.Models
             this.setFirstName(firstName);
         }
 
-        public virtual string output()
-        {
-            Console.WriteLine("Nothing to print!");
-            return "undefined";
-        }
+        public abstract double getBrutto();
 
         // ===================================================================================
         // Setter & Getter

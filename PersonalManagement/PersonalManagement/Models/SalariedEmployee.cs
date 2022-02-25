@@ -14,9 +14,9 @@ namespace PersonalManagement.Models
             this.setBruttoSalary(bruttoSalary);
         }
 
-        public override string output()
+        public override double getBrutto()
         {
-            return this.ToString();
+            return this.bruttoSalary;
         }
 
         // ===================================================================================

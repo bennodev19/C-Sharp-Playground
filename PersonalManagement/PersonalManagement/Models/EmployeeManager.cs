@@ -40,7 +40,7 @@ namespace PersonalManagement.Models
             string output = "";
             foreach (var employee in this.employees)
             {
-                output += employee.output() + "\n";
+                output += employee.ToString() + "\n";
             }
 
             return output;
