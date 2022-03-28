@@ -84,7 +84,7 @@ namespace PersonalManagement.ViewModels
 
         public MainWindowViewModel()
         {
-            this.employeeManager = new EmployeeManager();
+            this.employeeManager = EmployeeManager.getInstance();
 
             // Register Callbacks
             this.onAdd = ReactiveCommand.Create(async () => { this.addEmployee(); });

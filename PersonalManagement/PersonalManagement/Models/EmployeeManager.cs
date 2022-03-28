@@ -1,19 +1,31 @@
 using System.Collections.Generic;
-using System.Linq;
 
 namespace PersonalManagement.Models
 {
+    // Singleton
     public class EmployeeManager
     {
         private List<Employee> employees = new List<Employee>();
 
-        public EmployeeManager()
+        private EmployeeManager instance;
+
+        private EmployeeManager()
         {
         }
 
-        public EmployeeManager(List<Employee> initialEmployees)
+        private EmployeeManager(List<Employee> initialEmployees)
         {
             this.employees = initialEmployees;
+        }
+
+        public static EmployeeManager getInstance()
+        {
+            return new EmployeeManager();
+        }
+        
+        public static EmployeeManager getInstance(List<Employee> initialEmployees)
+        {
+            return new EmployeeManager(initialEmployees);
         }
 
         public void addWorker(string lastName, string firstName, int workedHours, int hoursSalary)
