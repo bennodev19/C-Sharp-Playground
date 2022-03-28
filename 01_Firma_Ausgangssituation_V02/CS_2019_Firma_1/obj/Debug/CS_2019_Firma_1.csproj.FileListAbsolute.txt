@@ -1,0 +1,76 @@
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe.config
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.pdb
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csprojAssemblyReference.cache
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.g.cs
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.g.cs
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.g.cs
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\App.g.cs
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.cache
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.lref
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.baml
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.baml
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.baml
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.g.resources
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_01.Properties.Resources.resources
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.GenerateResource.cache
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.CoreCompileInputs.cache
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.exe
+C:\Users\Rommel\Documents\Visual Studio 2017\Projects\CS_2019_Firma_1\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.pdb
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe.config
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.exe
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.pdb
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.pdb
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.g.cs
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.g.cs
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.g.cs
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\App.g.cs
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.cache
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.lref
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.baml
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.baml
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.baml
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.g.resources
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_01.Properties.Resources.resources
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.GenerateResource.Cache
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.AssemblyReference.cache
+G:\Meine Ablage\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.CoreCompileInputs.cache
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe.config
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.pdb
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.AssemblyReference.cache
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.g.cs
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.g.cs
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.g.cs
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\App.g.cs
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.cache
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.lref
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.baml
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.baml
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.baml
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.g.resources
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_01.Properties.Resources.resources
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.GenerateResource.cache
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.CoreCompileInputs.cache
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.exe
+G:\Meine Ablage\AWP12\AWP_12_IFA_18_19\C#\06_Design_Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.pdb
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe.config
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.exe
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\bin\Debug\CS_2019_Firma_1.pdb
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.AssemblyReference.cache
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.g.cs
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.g.cs
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.g.cs
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\App.g.cs
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.cache
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1_MarkupCompile.lref
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Eingabefenster.baml
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterliste.baml
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\C_Mitarbeiterstatistik.baml
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.g.resources
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_01.Properties.Resources.resources
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.GenerateResource.cache
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.csproj.CoreCompileInputs.cache
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.exe
+C:\Users\mrommel\OneDrive - Martin-Segitz-Schule (BSIII)\Dokumente\AWP Praxis\06 Design Pattern\01_Firma_Ausgangssituation_V02\CS_2019_Firma_1\obj\Debug\CS_2019_Firma_1.pdb
