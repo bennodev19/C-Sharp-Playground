@@ -7,7 +7,7 @@ namespace PersonalManagement.Models
     {
         private List<Employee> employees = new List<Employee>();
 
-        private EmployeeManager instance;
+        private static EmployeeManager instance;
 
         private EmployeeManager()
         {
@@ -20,7 +20,11 @@ namespace PersonalManagement.Models
 
         public static EmployeeManager getInstance()
         {
-            return new EmployeeManager();
+            if (instance == null)
+            {
+                instance = new EmployeeManager();
+            }
+            return instance;
         }
         
         public static EmployeeManager getInstance(List<Employee> initialEmployees)

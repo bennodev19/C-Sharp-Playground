@@ -16,9 +16,9 @@ namespace CS_2019_Firma_01
         public C_Firma()
         {
             this.Mitarbeiter = new List<C_Mitarbeiter>();
-            this.Eingabefenster = new C_Eingabefenster(this, 100, 150);
-            this.MitarbeiterListe = new C_Mitarbeiterliste(100, 450);
-            this.MitarbeiterStatistik = new C_Mitarbeiterstatistik(400, 450);
+            this.Eingabefenster = C_Eingabefenster.getInstance(this, 100, 150);
+            this.MitarbeiterListe = C_Mitarbeiterliste.getInstance(100, 450);
+            this.MitarbeiterStatistik = C_Mitarbeiterstatistik.getInstance(400, 450);
             Eingabefenster.Show();
             MitarbeiterListe.Show();
             MitarbeiterStatistik.Show();

@@ -19,11 +19,22 @@ namespace CS_2019_Firma_01
     /// </summary>
     public partial class C_Mitarbeiterstatistik : Window
     {
+        private static C_Mitarbeiterstatistik instance;
+        
         public C_Mitarbeiterstatistik(int iTop, int iLeft)
         {
             InitializeComponent();
             this.Top = iTop;
             this.Left = iLeft;
+        }
+
+        public static C_Mitarbeiterstatistik getInstance(int iTop, int iLeft)
+        {
+            if (instance == null)
+            {
+                instance = new C_Mitarbeiterstatistik(iTop, iLeft);
+            }
+            return instance;
         }
         public void zeigeDurchschnitt(List<C_Mitarbeiter> MeineMitarbeiter)
         {

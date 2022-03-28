@@ -19,11 +19,22 @@ namespace CS_2019_Firma_01
     /// </summary>
     public partial class C_Mitarbeiterliste : Window
     {
-        public C_Mitarbeiterliste(int iTop, int iLeft)
+        private static C_Mitarbeiterliste instance;
+        
+        private C_Mitarbeiterliste(int iTop, int iLeft)
         {
             InitializeComponent();
             this.Top = iTop;
             this.Left = iLeft;
+        }
+
+        public static C_Mitarbeiterliste getInstance(int iTop, int iLeft)
+        {
+            if (instance == null)
+            {
+                instance = new C_Mitarbeiterliste(iTop, iLeft);
+            }
+            return instance;
         }
 
         public void zeigeMitarbeiter(C_Mitarbeiter MeineMitarbeiter)
